@@ -1,3 +1,27 @@
+# 📰 News Sentiment Intelligence Pipeline
+
+An end-to-end ETL data pipeline built on **Apache Spark** and **Databricks** that ingests real financial news headlines, applies AI-powered NLP sentiment analysis, and loads results into **Delta Lake** for business intelligence reporting.
+
+---
+
+## 🧠 Project Overview
+
+This project was developed as part of **COSC2637 Big Data Processing** at **RMIT University**. It demonstrates a real-world big data pipeline using industry-standard tools and techniques.
+
+The pipeline answers a key business question:
+
+> *"What is the overall sentiment of today's financial news — and which outlets report most positively or negatively?"*
+
+---
+
+## 🏗️ Pipeline Architecture
+
+**Extract → Transform → Load (ETL)**
+
+- **Extract** — Load raw financial news headlines into Apache Spark
+- **Transform** — Apply AI sentiment scoring using VADER NLP via Spark UDFs
+- **Load** — Save results into Delta Lake tables for BI reporting
+
 ---
 
 ## ⚙️ Tech Stack
@@ -27,13 +51,37 @@
 - Aggregates sentiment breakdown by news source
 
 ### 3. Load
-- Saves scored headlines to Delta Lake table: `financial_news_sentiment`
-- Saves source aggregations to Delta Lake table: `sentiment_by_source`
+- Saves scored headlines to Delta Lake table: financial_news_sentiment
+- Saves source aggregations to Delta Lake table: sentiment_by_source
 - Generates final business intelligence summary report
 
 ---
+
+## 📈 Sample Output
+
+- Total headlines analysed: 20
+- Positive sentiment: 11 (55%)
+- Negative sentiment: 7 (35%)
+- Neutral sentiment: 2 (10%)
+- Most positive outlet: CNBC (avg score: 0.1603)
+- Most negative outlet: Reuters (avg score: -0.0337)
+- Overall market mood: BULLISH 📈
+- Pipeline Status: SUCCESS ✅
+- Storage Layer: Delta Lake
+- Processing Engine: Apache Spark
+
+---
+
+## 🚀 How to Run
+
+1. Create a free Databricks account at databricks.com
+2. Import News_Sentiment_Pipeline.ipynb into your Databricks workspace
+3. Run all cells in order using Shift + Enter
+
+---
+
 ## 👩‍💻 Author
 
-**Brinda Gandhi**  
-Master of Data Science — RMIT University  
+**Brinda Gandhi Rajan**
+Master of Data Science — RMIT University
 COSC2637 Big Data Processing
